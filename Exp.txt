@@ -1,0 +1,74 @@
+Factorial:
+    if(num >= 1){
+        f = f * num
+        num = num - 1
+        Factorial()
+    }
+end
+
+Pow:
+    pow = 1
+    for i in range of(0,y - 1)
+        pow = pow * x
+    end
+end
+
+Exp:
+    exp = 0
+    for i in range of(0,9)
+        y = i
+        Pow()
+        num = i
+        f = 1
+        Factorial()
+        exp = exp + pow / f
+    end
+end
+
+begin
+    double num
+    int i
+    double f
+    double x
+    double y
+    double pow
+    double exp
+    int c
+    do
+        outP("Menu")
+        outP("\n")
+        outP("Factorial: 1")
+        outP("\n")
+        outP("Power: 2")
+        outP("\n")
+        outP("Exponential: 3")
+        outP("\n")
+        c = inP()
+        if(c == 1){
+            outP("X: ")
+            num = inP()
+            f = 1
+            Factorial()
+            outP(f)
+            outP("\n")
+        }
+        if(c == 2){
+            outP("X: ")
+            x = inP()
+            outP("Y: ")
+            y = inP()
+            Pow()
+            outP(pow)
+            outP("\n")
+        }
+        if(c == 3){
+            outP("X: ")
+            x = inP()
+            Exp()
+            outP(exp)
+            outP("\n")
+        }
+        outP("\n")
+    until(c != 1 && c != 2 && c !=3 )
+
+end

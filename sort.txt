@@ -1,0 +1,51 @@
+Read:
+    outP("Vector: ")
+    outP("\n")
+    for i in range of(0,m - 1)
+        vector[i] = inP()
+    end
+end
+
+Sort:
+    for i in range of (0,m - 2)
+        min = i
+        for j in range of(i + 1,m - 1)
+           if(vector[j] < vector[min]){
+               min = j
+           }
+        end
+        n = vector[i]
+        vector[i] = vector[min]
+        vector[min] = n
+    end
+end
+
+Print:
+    outP("Printing")
+    outP("\n")
+    for i in range of(0,m - 1)
+        outP(vector[i])
+        outP(" ")
+    end
+    outP("\n")
+end
+
+begin
+    int i
+    int j
+    int min
+    int vector[10]
+    int m
+    int n
+    int c
+    do
+        outP("Size: ")
+        m = inP()
+        Read()
+        Sort()
+        Print() 
+        outP("Again? ")
+        outP("\n")
+        c = inP()
+    until(c != 1)
+end

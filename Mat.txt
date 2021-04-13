@@ -1,0 +1,90 @@
+ReadA:
+    for i in range of(0, rowA - 1)
+        for j in range of(0, colA - 1)
+            outP("Element A(")
+            outP(i)
+            outP(",")
+            outP(j)
+            outP("): ")
+            matA[i][j] = inP()
+        end
+    end
+end
+
+ReadB:
+    for i in range of(0, rowB - 1)
+        for j in range of(0, colB - 1)
+            outP("Element B(")
+            outP(i)
+            outP(",")
+            outP(j)
+            outP("): ")
+            matB[i][j] = inP()
+        end
+    end
+end
+
+AddOrMult:
+    outP("Add or Multiply 0 or 1: ")
+    outP("\n")
+    oper = inP()
+    for i in range of(0, rowB - 1)
+        for j in range of(0, colB - 1)
+            if(oper == 0){
+                matC[i][j] = matA[i][j] + matB[i][j]
+            }
+            if(oper == 1){
+                matC[i][j] = matA[i][j] * matB[i][j]
+            }
+        end
+    end
+end
+
+PrintC:
+    outP("Result: ")
+    outP("\n")
+    for i in range of(0, rowB - 1)
+        for j in range of(0, colB - 1)
+            outP(matC[i][j])
+            outP(" ")
+        end
+        outP("\n")
+    end
+end
+
+begin
+    int matA[5][5]
+    int matB[5][5]
+    int matC[5][5]
+    int i
+    int j
+    int rowA
+    int colA
+    int rowB
+    int colB
+    int c
+    int oper
+    do
+        outP("Rows A: ")
+        rowA = inP()
+        outP("Cols A: ")
+        colA = inP()
+        outP("Rows B: ")
+        rowB = inP()
+        outP("Cols B: ")
+        colB = inP()
+        if(rowA == rowB && colA == colB){
+            ReadA()
+            ReadB()
+            AddOrMult()
+            PrintC()
+        } else{
+            outP("Cant add or multiply with different dimensions")
+            outP("\n")
+        }    
+        outP("Again?")
+        outP("\n")
+        c = inP()
+    until(c != 1)
+    
+end

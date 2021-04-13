@@ -1,0 +1,36 @@
+debug on
+Trig:
+    for i in range of(0,n - 1)
+        vector[i] = cos(vector[i])
+        if(abs(vector[i] - 0) < 0.001){
+            vector[i] = 0
+        }
+    end
+end
+
+Print:
+    outP("Printing: ")
+    outP("\n")
+    for i in range of(0,n - 1)
+        outP(vector[i])
+        outP(" ")
+    end
+    outP("\n")
+end
+
+begin
+    int n
+    int i
+    int neg
+    double offset
+    double vector[10]
+    n = 10
+    offset = pi / 2
+    neg = 1 - 2
+    for i in range of(0, n - 1)
+        vector[i] = i * pi /2
+    end
+    Trig()
+    Print()
+end
+

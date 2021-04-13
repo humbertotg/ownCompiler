@@ -1,0 +1,55 @@
+Read:
+    for i in range of(0,m - 1)
+        for j in range of(0, m - 1)
+            for k in range of(0, m - 1)
+                outP("Cube(")
+                outP(i)
+                outP(",")
+                outP(j)
+                outP(",")
+                outP(k)
+                outP("): ")
+                cube[i][j][k] = inP() 
+            end
+        end
+    end
+end
+
+Multiply:
+    for i in range of(0,m - 1)
+        for j in range of(0, m - 1)
+            for k in range of(0, m - 1)
+                cube[i][j][k] = cube[i][j][k] * 2 
+            end
+        end
+    end
+end
+
+Print:
+    outP("Printing:")
+    outP("\n")
+    for i in range of(0,m - 1)
+        for j in range of(0, m - 1)
+            for k in range of(0, m - 1)
+                outP(cube[i][j][k])
+                outP(" ") 
+            end
+            outP("\n")
+        end
+        outP("\n")
+    end
+end
+
+
+begin
+    int m
+    int cube[2][2][2]
+    int i
+    int j
+    int k
+    m = 2
+    Read()
+    Multiply()
+    Print()
+
+end
